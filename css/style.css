@@ -394,6 +394,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
   margin-bottom: 2%;
+  position: relative;
 }
 .index-footer-blok.index-footer-blok_2-columns {
   background: none;
@@ -448,6 +449,10 @@ body {
   border-radius: 20px;
   box-shadow: 2px 2px 30px 0px rgba(0, 0, 0, 0.1);
 }
+.index-footer-item {
+  position: relative;
+  padding-right: 23% !important;
+}
 .index-footer-item:first-child {
   flex: 1 1 auto;
 }
@@ -497,6 +502,19 @@ body {
   text-align: center;
   color: rgba(86, 86, 86, 1);
 
+}
+
+
+.index-footer-blok__img {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 28%;
+}
+.index-footer-blok__img_big {
+  width: 55%;
+  right: 0;
+  bottom: 0;
 }
 /* ============================================*/
 
