@@ -18,6 +18,9 @@
 
 		<!--===============================-->
 		<!--Css-->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet">
 			<link rel="stylesheet" href="css/style.css" />
 		<!--===============================-->
 		<meta charset="utf-8">
@@ -30,9 +33,15 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__body">
+						<div class="header__mobile-left">
+							<div class="burger-icon">
+								<img src="img/header/icon-burger.svg" alt="">
+							</div>
+						</div>
 						<a href="#" class="header__logo">
 							<img src="img/header/Logo.svg" alt="">
 						</a>
+						<div class="header__mobile-right"></div>
 						<ul class="header__list">
 							<li class="header__link">
 								<a href="#">
@@ -65,8 +74,8 @@
 								</a>
 							</li>
 						</ul>
-						<div class="header-button">
-							<a href="#" class="header-button__link">
+						<div data-da=".header__list, 1064, last" class="header-button">
+							<a href="#" data-da=".header__mobile-right, 1064, last" class="header-button__link">
 								<img src="img/header/icon-2.svg" alt="">
 								<span>
 									Войти
@@ -82,13 +91,209 @@
 					</div>
 				</div>
 			</header>
-			<section class="index-blok">
-				<div class="container">
-					<div class="index-blok__body">
-						
+			<section class="index">
+				<div class="index-blok">
+					<div class="container">
+						<div class="index-blok__body">
+							<div class="index-blok__content">
+								<div class="index-blok__title">
+									Сервис по решению долговых и правовых проблем граждан
+								</div>
+								<div class="index-blok__text">
+									Первая автоматизированная платформа, которая помогает решать вопросы с долгами, кредитами и юридическими проблемами онлайн
+								</div>
+								<a href="#" class="index-blok__button">
+									Зарегистрироваться
+								</a>
+							</div>
+							<div class="index-blok__img">
+								<img src="img/index-blok/1.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="index-footer">
+					<div class="container">
+						<div class="index-footer__body">
+							<div class="index-footer-blok">
+								<div class="index-footer-item">
+									<div class="index-footer-blok__title">
+										Списание долгов
+									</div>
+									<div class="index-footer-blok__text">
+										Через внесудебное и судебное банкротство
+									</div>
+								</div>
+								<form action="#" class="index-footer-item">
+									<div class="index-footer-blok__input">
+										<input type="number">
+									</div>
+									<button class="index-footer-blok__button">
+										Списать
+									</button>
+								</form>
+							</div>
+							<div class="index-footer-blok">
+								<div class="index-footer-item">
+									<div class="index-footer-blok__title">
+										Снизим выплаты по кредитам
+									</div>
+									<div class="index-footer-blok__text">
+										Через рефинансирование ваших обязательств
+									</div>
+								</div>
+								<form action="#" class="index-footer-item">
+									<div class="index-footer-blok__input">
+										<input type="number">
+									</div>
+									<button class="index-footer-blok__button">
+										Списать
+									</button>
+								</form>
+							</div>
+							<div class="index-footer-blok index-footer-blok_2-columns">
+								<div class="index-footer-item">
+									<div class="index-footer-blok__title">
+										Юридические услуги
+									</div>
+									<div class="index-footer-blok__text">
+										Онлайн оценка перспектив
+									</div>
+								</div>
+								<div class="index-footer-item">
+									<div class="index-footer-blok__title">
+										Реструктуризация кредитов
+									</div>
+									<div class="index-footer-blok__text">
+										Ипотека, потребительские кредиты подберем лучшие условиями
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="index-footer__list">
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+							<a href="#" class="index-footer-link">
+								<img src="img/index-blok/icon-1.png" alt="" class="index-footer-link__img">
+								<span class="index-footer-link__text">
+									Судебный приказ
+								</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
+			<div class="friend-invitation">
+				<img src="img/friend-invitation/bacgraund.png" alt="" class="friend-invitation__bacgraund">
+				<div class="container">
+					<div class="friend-invitation__body">
+						<div class="friend-invitation__content">
+							<div class="friend-invitation__title">
+								Получи доход <br>
+								от 10 000 рублей
+							</div>
+							<div class="friend-invitation__wrapper">
+								<div class="friend-invitation__text">
+									Пригласи друга и получи деньги! За любой продукт, который оформит друг по вашей рекомендации
+								</div>
+								<a href="" class="friend-invitation__link">
+									Пригласить
+								</a>
+							</div>
+						</div>
+						<div class="friend-invitation__img">
+							<img src="img/friend-invitation/1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="our-differences">
+				<div class="container">
+					<div class="our-differences__title">
+						Что отличает нас от других
+					</div>
+					<div class="our-differences__wrapper">
+						<div class="our-differences-body">
+							<div class="our-differences-body__img our-differences-body__img_big">
+								<img src="img/our-differences/1.png" alt="">
+							</div>
+							<div class="our-differences-body__content our-differences-body__content_right">
+								<div class="our-differences-body__title">
+									Сервис – онлайн
+								</div>
+								<div class="our-differences-body__text">
+									Мы экономим ваше время и деньги - работа сервиса позволяет проводить консультации с вами из любой точки мира по видеосвязи - вы видите нас, мы видим вас
+								</div>
+							</div>
+						</div>
+						<div class="our-differences-body">
+							<div class="our-differences-body__content">
+								<div class="our-differences-body__title">
+									Искусственный интеллект
+								</div>
+								<div class="our-differences-body__text">
+									Для вас мы создали уникальный инструмент, где 90% работы автоматизировано. Больше никаких кип бумаг, поисков в интернете. Наш робот сам подберет для вас оптимальный вариант решения
+								</div>
+							</div>
+							<div class="our-differences-body__img our-differences-body__img_min">
+								<img src="img/our-differences/2.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<script src="js/custom.js"></script>
