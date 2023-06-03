@@ -188,6 +188,56 @@ da.init();
 
 
 //==================================================================================================================================================
+//Шапка - "Начало"
+//==================================================================================================================================================
+
+const iconMenu = document.querySelector('.burger-icon');
+const iconMenuTwo = document.querySelector('.header-burger__icon');
+const menuBody = document.querySelector('.header-burger');
+if (iconMenu) {
+	iconMenu.addEventListener("click", function (e) {
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		menuBody.classList.toggle('_active');
+	});
+	iconMenuTwo.addEventListener("click", function (e) {
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		menuBody.classList.toggle('_active');
+	});
+}
+
+/*====================================*/
+
+const headerSpoilers = document.querySelectorAll('[data-header-spoiler]');
+
+if (headerSpoilers.length > 0) {
+	for (let i = 0; i < headerSpoilers.length; i++) {
+		let headerSpoiler = headerSpoilers[i];
+		let headerSpoilerWrapper = document.querySelector(`#${headerSpoiler.dataset.headerSpoiler}`);
+		
+		headerSpoiler.addEventListener("click", function (e) {
+			headerSpoiler.classList.toggle('_active');
+			headerSpoilerWrapper.classList.toggle('_active');
+
+			let headerSpoilerActives = headerSpoilerWrapper.querySelectorAll('._active');
+			if (headerSpoilerActives) {
+				for (let i = 0; i < headerSpoilerActives.length; i++) {
+					let headerSpoilerActive = headerSpoilerActives[i];
+					headerSpoilerActive.classList.remove("_active");
+				}
+			}
+		});
+	}
+}
+
+//==================================================================================================================================================
+//Шапка - "Конец"
+//==================================================================================================================================================
+
+
+
+//==================================================================================================================================================
 //Слайдеры - "Начало"
 //==================================================================================================================================================
 
