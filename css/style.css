@@ -422,7 +422,7 @@ body {
     padding: 0;
   }
   .header__link > *{
-    padding: 7px 0 !important;
+    padding: 12px 0 !important;
     display: block;
   }
   .header__link:first-child  {
@@ -683,6 +683,7 @@ body {
   background: none;
   box-shadow: none;
   padding: 0;
+  overflow: visible;
 }
 .index-footer-blok__title {
   font-size: 20px;
