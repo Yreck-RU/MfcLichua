@@ -289,6 +289,27 @@ if (mediaQuery.matches) {
 			},
 		},
 	});
+	var swiperTwree = new Swiper(".footer-standart-list", {
+		slidesPerView: "auto",
+		spaceBetween: 30,
+		slidesPerView: 2,
+
+		breakpoints: {
+			319.1: {
+				slidesPerView: 1,
+			},
+			540.1: {
+				slidesPerView: 2,
+			},
+			620.1: {
+				slidesPerView: 2,
+			},
+		},
+		navigation: {
+			prevEl: ".footer-standart-list__button-left",
+			nextEl: ".footer-standart-list__button-right",
+		},
+	});
 }
 
 //==================================================================================================================================================
@@ -476,4 +497,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //==================================================================================================================================================
 //Формы - "Конец"
+//==================================================================================================================================================
+
+
+
+//==================================================================================================================================================
+//Квиз - "Начало"
+//==================================================================================================================================================
+
+const kviz = document.querySelector("._kviz");
+
+if (kviz) {
+	const kvizItems = document.querySelectorAll(".test-item");
+	const kvizButton = document.querySelector(".test-button");
+
+	let kvizButtonDistance = document.querySelector("._kviz-distance");
+	kvizButtonDistance.addEventListener("click", function (e) {
+		for (let i = 0; i < kvizItems.length; i++) {
+			if (kvizItems[i].classList.contains("_active")) {
+				let testItemBloks = kvizItems[i].querySelectorAll(".test-item-blok");
+				let validateBulen = false;
+				for (let i = 0; i < testItemBloks.length; i++) {
+					let testItemBlok = testItemBloks[i];
+					let testItemBlokInput = testItemBlok.querySelector("input:checked");
+					if (testItemBlokInput) {
+						validateBulen = true;
+						break;
+					}
+				}
+				if (validateBulen) {
+					kvizButton.classList.remove("_test-button_one-slaid");
+					kvizItems[i].classList.remove("_error");
+					kvizItems[i].classList.remove("_active");
+					i = i + 1;
+					kvizItems[i].classList.add("_active");
+					if (kvizItems[i].classList.contains("_test-form")) {
+						kvizButton.classList.add("_test-button_last-slaid");
+					}
+					break;
+				} else {
+					kvizItems[i].classList.add("_error");
+					break;
+				}
+			}
+
+		}
+	});
+
+	let kvizButtonBack = document.querySelector("._kviz-back");
+	kvizButtonBack.addEventListener("click", function (e) {
+		for (let i = 0; i < kvizItems.length; i++) {
+			if (kvizItems[i].classList.contains("_active")) {
+				if (i == 1) {
+					kvizButton.classList.add("_test-button_one-slaid");
+				}
+				if (i != 0) {
+					kvizButton.classList.remove("_test-button_last-slaid");
+					kvizItems[i].classList.remove("_active");
+					i = i - 1;
+					kvizItems[i].classList.add("_active");
+					break;
+				}
+			}
+
+		}
+	});
+}
+
+//==================================================================================================================================================
+//Квиз - "Конец"
 //==================================================================================================================================================
