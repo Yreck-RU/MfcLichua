@@ -495,6 +495,36 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+/*=============================*/
+
+
+
+
+
+const inputFiles =  document.querySelectorAll('.input-field');
+
+if (inputFiles) {
+	for (let i = 0; i < inputFiles.length; i++) {
+		let inputFile = inputFiles[i];
+		let inputFileWrapper = inputFile.querySelector('.input-field__wrapper');
+
+		inputFile.querySelector('input').addEventListener("change", function (e) {
+			if (inputFile.querySelector('input').value && !inputFile.classList.contains('_active')) {
+				inputFile.classList.add('_active');
+			} else if (!inputFile.querySelector('input').value && inputFile.classList.contains('_active')) {
+				inputFile.classList.remove('_active');
+			}
+		});
+	}
+}
+
+
+
+
+
+
+
 //==================================================================================================================================================
 //Формы - "Конец"
 //==================================================================================================================================================
@@ -744,6 +774,29 @@ if (kviz) {
 		}
 	});
 }
+
+//==================================================================================================================================================
+//Квиз - "Конец"
+//==================================================================================================================================================
+
+
+
+//==================================================================================================================================================
+//Квиз - "Начало"
+//==================================================================================================================================================
+
+
+let vedeos = document.querySelectorAll("._vedeo");
+
+if (vedeos) {
+	for (var i = 0; i < vedeos.length; i++) {
+		let vedeo = vedeos[i];
+		vedeo.addEventListener("click", function (e) {
+			vedeo.classList.toggle("_active");
+		});
+	}
+}
+
 
 //==================================================================================================================================================
 //Квиз - "Конец"
