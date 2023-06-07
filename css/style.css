@@ -133,8 +133,8 @@ body._lock {
 }
 
 
-body {
-  font-family: 'Roboto', sans-serif;
+body *{
+  font-family: Roboto;
 }
 
 /*=============================*/
