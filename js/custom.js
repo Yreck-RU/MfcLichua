@@ -264,7 +264,48 @@ var swiper = new Swiper(".cases-slaider-swiper", {
 	},
 });
 
+var swiperFore = new Swiper(".slaider-fore", {
+	spaceBetween: 30,
+	slidesPerView: 3,
+	
+	navigation: {
+		prevEl: ".slaider-standart__button_left",
+		nextEl: ".slaider-standart__button_right",
+	},
 
+	breakpoints: {
+		319.1: {
+			slidesPerView: 1,
+		},
+		620.1: {
+			slidesPerView: 2,
+		},
+		1064.1: {
+			slidesPerView: 3,
+		},
+	},
+});
+var swiperFiwe = new Swiper(".swiper-five", {
+	spaceBetween: 30,
+	slidesPerView: 3,
+	
+	navigation: {
+		prevEl: ".slaider-standart__button-vedeo_left",
+		nextEl: ".slaider-standart__button-vedeo_right",
+	},
+
+	breakpoints: {
+		319.1: {
+			slidesPerView: 1,
+		},
+		620.1: {
+			slidesPerView: 2,
+		},
+		1064.1: {
+			slidesPerView: 3,
+		},
+	},
+});
 
 const mediaQuery = window.matchMedia('(max-width: 768px)')
 if (mediaQuery.matches) {
@@ -521,7 +562,54 @@ if (inputFiles) {
 
 
 
+/*=============================*/
 
+
+
+const selectSingles = document.querySelectorAll('.select');
+
+if (selectSingles) {
+	for (let i = 0; i < selectSingles.length; i++) {
+		const selectSingle = selectSingles[i];
+		const selectSingle_title = selectSingle.querySelector('.select-title');
+		const selectSingle_labels = selectSingle.querySelectorAll('.select-content__label');
+
+		// Toggle menu
+		selectSingle_title.addEventListener('click', () => {
+			if ('active' === selectSingle.getAttribute('data-state')) {
+				//selectSingle.setAttribute('data-state', '');
+			} else {
+				selectSingle.setAttribute('data-state', 'active');
+				if (selectSingle_title.classList.contains('__select__title-countries')) {
+
+				}
+			}
+		});
+
+		document.addEventListener( 'click', (e) => {
+			let withinBoundaries = e.composedPath().includes(selectSingle_title);
+			let withinBoundaries2 = e.composedPath().includes(selectSingle_labels);
+			if ( ! withinBoundaries && ! withinBoundaries2) {
+				selectSingle.setAttribute('data-state', '');
+			}
+			
+		})
+
+		// Close when click to option
+		for (let i = 0; i < selectSingle_labels.length; i++) {
+			let selectSingle_label = selectSingle_labels[i];
+			selectSingle_labels[i].addEventListener('click', (evt) => {
+				if (selectSingle_title.querySelector('input')) {
+					selectSingle_title.querySelector('input').value = evt.target.textContent;
+					//console.log(evt.target.textContent);
+				}
+				selectSingle.setAttribute('data-state', '');
+			});
+		}
+	}
+}
+
+//==================================================
 
 
 
